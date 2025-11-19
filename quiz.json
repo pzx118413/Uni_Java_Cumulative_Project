@@ -1,0 +1,19 @@
+{
+  "questions": [
+    {
+      "questionText": "What is the best-selling board game of all time?",
+      "answers": [
+        {
+          "text": "Monopoly"
+        },
+        {
+          "text": "Chess"
+        },
+        {
+          "text": "Scrabble"
+        }
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
