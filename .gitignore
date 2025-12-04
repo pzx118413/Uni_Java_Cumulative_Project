@@ -1,0 +1,22 @@
+# IntelliJ project files
+.idea/
+*.iml
+
+# VS/Windows junk
+.vs/
+Thumbs.db
+*.lnk
+
+# Build output
+out/
+build/
+target/
+
+# Logs
+*.log
+
+# Java specific
+*.class
+
+# macOS
+.DS_Store
