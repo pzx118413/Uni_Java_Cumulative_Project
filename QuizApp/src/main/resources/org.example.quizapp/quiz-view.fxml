@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.quizapp.QuizController"
+            prefWidth="600" prefHeight="400">
+
+    <center>
+        <VBox spacing="15" alignment="CENTER" styleClass="main-pane">
+            <Label fx:id="scoreLabel" text="Score: 0" styleClass="score-label"/>
+            <Label fx:id="questionLabel" styleClass="question-label"/>
+            <VBox fx:id="answersBox" spacing="10"/>
+            <Button text="Skip Question"
+                    fx:id="skipButton"
+                    onAction="#nextQuestion"
+                    styleClass="skip-button"/>
+        </VBox>
+    </center>
+
+</BorderPane>
