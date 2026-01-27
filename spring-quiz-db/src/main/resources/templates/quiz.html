@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Board Game Quiz</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1>Board Game Quiz</h1>
+
+<div class="quiz-container">
+
+    <div class="question" th:each="question : ${questions}">
+        <p th:text="${question.text}"></p>
+
+        <form th:action="@{/answer}" method="post">
+            <input type="hidden" name="questionId" th:value="${question.id}" />
+
+            <button type="submit"
+                    name="chosenAnswer"
+                    th:value="${question.optionA}"
+                    th:text="${question.optionA}">
+            </button>
+
+            <button type="submit"
+                    name="chosenAnswer"
+                    th:value="${question.optionB}"
+                    th:text="${question.optionB}">
+            </button>
+
+            <button type="submit"
+                    name="chosenAnswer"
+                    th:value="${question.optionC}"
+                    th:text="${question.optionC}">
+            </button>
+        </form>
+
+        <p th:if="${answeredQuestionId == question.id}"
+           th:text="${result}"
+           th:class="${resultColor}">
+        </p>
+    </div>
+    <h2>Score: <span th:text="${score}">0</span></h2>
+
+</div>
+
+</body>
+</html>
