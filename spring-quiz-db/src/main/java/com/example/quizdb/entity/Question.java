@@ -1,4 +1,5 @@
 package com.example.quizdb.entity;
+//Entity comes from jakarta.persistence.* :)
 import jakarta.persistence.*;
 
 @Entity
@@ -23,7 +24,6 @@ public class Question {
         this.answer = answer;
     }
 
-    // getters
     public Long getId() { return id; }
     public String getText() { return text; }
     public String getOptionA() { return optionA; }
